@@ -1,10 +1,13 @@
+import { Link } from "react-router-dom"
 import "./sidebar.css"
 
 export default function Sidebar() {
   return (
     <div className="sidebar">
         <div className="sidebarItem">
-            <span className="sidebarTitle">ABOUT ME</span>
+        <Link className="link" to = "/about" >
+          <span className="sidebarTitle"><bold><i>ABOUT DISCUSS</i></bold></span>
+        </Link>
             <img className="sidebarImg"
             src="\side.jpg"
             alt=""

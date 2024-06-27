@@ -5,14 +5,33 @@ import { Context } from "../../context/Context";
 
 export default function TopBar() {
   const { user, dispatch } = useContext(Context);
+  const PF = "http://localhost:7733/images/";
+  const defaultProfilePic = "/profile.jpg"; // Path to the default image
+
+  
+  const handleLogout = () => {
+    dispatch({type:"LOGOUT"});
+  };
+
+  
+
+  
+
+    // Debugging log
+    console.log("User Profile Pic:", user ? user.profilePic : "No user");
+    console.log("Profile Image URL:", user ? (user.profilePic ? PF + user.profilePic : defaultProfilePic) : defaultProfilePic);
+  
 
   return (
     <div className="top">
-      <div className="topLeft">
-        <i className="topIcon fa-brands fa-linkedin"></i>
-        <i className="topIcon fa-brands fa-square-instagram"></i>
-        <i className="topIcon fa-brands fa-square-whatsapp"></i>
-      </div>
+      
+            <Link to="/about">
+              <div className="topLeft">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <p>Learning</p>
+              </div>
+            </Link>
+
       <div className="topCorner">
         <ul className="topList">
             <li className="topListItem">
@@ -27,16 +46,23 @@ export default function TopBar() {
             <li className="topListItem">
               <Link className="link" to = "/write" >WRITE</Link>
             </li>
-            <li className="topListItem">
+            <li className="topListItem" onClick={handleLogout}>
               {user && "LOGOUT"}
             </li>  
         </ul>
       </div>
       <div className="topRight">
+
+        
         {
           user ? (
-            <img className="topImg"
-            src="\pro.webp"  alt="" />
+            <Link to="/settings">
+              <img className="topImg"
+              src={user.profilePic ? PF + user.profilePic : defaultProfilePic}   alt="profile" />
+              
+            </Link>
+            
+            
           ) :  (
             <ul className="topList">
               <li className="topListItem">
@@ -52,7 +78,11 @@ export default function TopBar() {
         }
         
         
-        <i className ="topSearchIcon fa-solid fa-magnifying-glass"></i>
+
+        {/* <i className ="topSearchIcon fa-solid fa-magnifying-glass"></i>*/}
+        
+
+
       </div>
 
     </div>

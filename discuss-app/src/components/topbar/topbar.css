@@ -17,6 +17,16 @@
     justify-content: center;
 }
 
+.topLeft {
+    
+    margin-left: 170px;
+    margin-right: 20px;
+
+    overflow: hidden; /* Ensure image stays within bounds */
+    object-fit: cover;
+    cursor: pointer;
+}
+
 .topCorner  {
     flex: 6;
 }
@@ -33,6 +43,7 @@
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .topList {
@@ -50,9 +61,12 @@
     cursor: pointer;
 }
 
+
+/*
 .topSearchIcon  {
     font-size: 18px;
     color: #666;
     cursor: pointer;
     margin-left: 15px;
 }
+*/
