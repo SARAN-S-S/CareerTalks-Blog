@@ -16,31 +16,32 @@ app.use("/images", express.static(path.join(__dirname, "/images")));
 mongoose
     .connect(process.env.MONGO_URL, {
          // The options useNewUrlParser, useUnifiedTopology, useFindAndModify, and useCreateIndex are no longer necessary
-         
     })
-    .then(console.log("Connected to MongoDB"))
+    .then(() => console.log("Connected to MongoDB"))
     .catch((err) => console.log(err));
 
-    //images storing
-    const storage = multer.diskStorage({
-        destination:(req, file, cb)  => {
-            cb(null, "images");
-        },
-        filename: (req, file, cb)  => {
-            cb(null, req.body.name);
-        }
-    })
+// images storing
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, "images");
+    },
+    filename: (req, file, cb) => {
+        cb(null, req.body.name);
+    }
+});
 
-    //upload the file
-    const upload = multer({storage:storage});
-    app.post("/api/upload", upload.single("file"), (req, res) => {
-        res.status(200).json("File has been uploaded");
-    })
+// upload the file
+const upload = multer({ storage: storage });
+app.post("/api/upload", upload.single("file"), (req, res) => {
+    res.status(200).json("File has been uploaded");
+});
 
-    app.use("/api/auth", authRoute);
-    app.use("/api/users", userRoute);
-    app.use("/api/posts", postRoute);
+app.use("/api/auth", authRoute);
+app.use("/api/users", userRoute);
+app.use("/api/posts", postRoute);
 
-app.listen("7733", () => {
-    console.log("Backend is running.");
+// Use the PORT environment variable or default to 7733
+const PORT = process.env.PORT || 7733;
+app.listen(PORT, () => {
+    console.log(`Backend is running on port ${PORT}.`);
 });

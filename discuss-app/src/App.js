@@ -11,7 +11,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
 } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "./context/Context";

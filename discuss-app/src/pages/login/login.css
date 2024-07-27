@@ -10,13 +10,14 @@
 
 
 .loginContainer {
-    background-color: rgba(44, 255, 241, 0.9);
+    background-color: transparent;
     padding: 50px; 
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     border: 1px solid #d1c4c4; 
     display: flex;
     flex-direction: column;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     align-items: center;
 }
 
