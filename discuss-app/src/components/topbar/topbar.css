@@ -1,6 +1,6 @@
 .top{
     width: 100%;
-    height: 50px;
+    height: 60px;
     background-color: white;
     position: sticky;
     top: 0;
@@ -20,12 +20,17 @@
 .topLeft {
     
     margin-left: 170px;
-    margin-right: 20px;
+    margin-right: 60px;
 
     overflow: hidden; /* Ensure image stays within bounds */
     object-fit: cover;
     cursor: pointer;
 }
+
+.profile-text {
+    color: blue; /* Sets the text color to blue */
+}
+
 
 .topCorner  {
     flex: 6;

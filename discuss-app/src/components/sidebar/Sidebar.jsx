@@ -12,7 +12,7 @@ export default function Sidebar() {
             src="\side.jpg"
             alt=""
             />
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit nisi quibusdam, omnis reiciendis recusandae in corrupti.</p>
+            <p>CareerTalk offers a comprehensive resource for freshers and juniors preparing for job interviews. Our platform provides detailed insights into interview processes, common questions, and real-world experiences from professionals. We also invite individuals to share their own interview experiences, contributing to a valuable knowledge base for others. Explore our discussions and expert advice to gain confidence and excel in your career journey. Join us in enhancing our collective understanding and preparation strategies.</p>
         </div>
     </div>
   )

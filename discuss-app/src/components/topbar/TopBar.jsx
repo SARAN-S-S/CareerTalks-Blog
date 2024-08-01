@@ -25,10 +25,10 @@ export default function TopBar() {
   return (
     <div className="top">
       
-            <Link to="/about">
+            <Link className="link" to="/about" >
               <div className="topLeft">
-                <i class="fa-solid fa-graduation-cap"></i>
-                <p>Learning</p>
+                <i  class="fa-solid fa-graduation-cap"></i>
+                <p class="profile-text"><b>CareerTalks</b></p>
               </div>
             </Link>
 
@@ -56,9 +56,10 @@ export default function TopBar() {
         
         {
           user ? (
-            <Link to="/settings">
+            <Link to="/settings" className="link" >
               <img className="topImg"
               src={user.profilePic ? PF + user.profilePic : defaultProfilePic}   alt="profile" />
+              <p class="profile-text">profile</p>
               
             </Link>
             

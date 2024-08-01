@@ -1,16 +1,16 @@
-.login  {
+.login {
     height: calc(100vh - 50px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url("C:\Users\ASUS\Desktop\Discussion App\discuss-app\public\login.jpg");
+    background-color: rgba(124, 181, 152, 0.7);
     background-size: cover;
 }
 
 
 .loginContainer {
-    background-color: transparent;
+    background-color: rgba(111, 154, 132, 0.7);
     padding: 50px; 
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
@@ -46,14 +46,17 @@
 .loginSubmit  {
     margin-top: 20px;
     cursor: pointer;
-    background-color: lightcoral;
+    background-color: rgb(126, 101, 41);
     border: none;
     color: white;
     border-radius: 10px;
     padding: 10px;
 }
 
-
+.loginSubmit:hover  {
+    background-color: rgb(61, 58, 51);
+    color: white;
+}
 
 .loginSubmit:disabled {
     cursor: not-allowed;
@@ -62,17 +65,18 @@
 
 .loginRegisterSubmit  {
     position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: teal;
+    top: 80px;
+    right: 40px;
+    background-color: rgb(90, 27, 67);
     cursor: pointer;
     border: none;
     padding: 10px;
     color: white;
-    border-radius: 10px;
+    border-radius: 5px;
+    width: 100px;
 }
 
 .loginRegisterSubmit:hover {
-    background-color: rgb(149, 190, 205);
-    color: rgb(41, 34, 34);
+    background-color: rgb(194, 65, 18);
+    color: white;
 }

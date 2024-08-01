@@ -3,18 +3,21 @@ import './contact.css';
 
 export default function Contact() {
   const members = [
-    {
-      name: 'Jayaprakash S',
-      department: 'Electronics and Communication Engineering',
-      email: 'jayaprakash.ec21@bitsathy.ac.in',
-      linkedin: 'https://www.linkedin.com/in/saran-s-s-84a696245/',
-    },
+
     {
       name: 'SARAN S S',
       department: 'Electronics and Communication Engineering',
       email: 'saran.ec21@bitsathy.ac.in',
       linkedin: 'https://www.linkedin.com/in/saran-s-s-84a696245/',
     },
+    /*
+    {
+      name: 'Jayaprakash S',
+      department: 'Electronics and Communication Engineering',
+      email: 'jayaprakash.ec21@bitsathy.ac.in',
+      linkedin: 'https://www.linkedin.com/in/saran-s-s-84a696245/',
+    },
+    
     {
       name: 'VISHNU S',
       department: 'Electronics and Communication Engineering',
@@ -27,6 +30,7 @@ export default function Contact() {
       email: 'gnanaprakash.ec21@bitsathy.ac.in',
       linkedin: 'https://www.linkedin.com/in/saran-s-s-84a696245/',
     },
+    */
   ];
 
   return (
