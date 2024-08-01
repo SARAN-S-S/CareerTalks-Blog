@@ -34,7 +34,7 @@ export default function Settings() {
           updatedUser.profilePic = filename;
           
           try {
-            await axios.post("/upload", data)
+            await axios.post("/api/upload", data)
             
           }  
           catch(err)  {
@@ -42,7 +42,7 @@ export default function Settings() {
           }
         }
         try {
-            const res = await axios.put(`/users/${user._id}`, updatedUser);
+            const res = await axios.put(`/api/users/${user._id}`, updatedUser);
             setSuccess(true);
             dispatch({type: "UPDATE_SUCCESS", payload: res.data});
         }
@@ -53,7 +53,7 @@ export default function Settings() {
 
   const handleDelete = async () => {
         try {
-            await axios.delete(`/users/${user._id}`, { data: { userId: user._id } });
+            await axios.delete(`/api/users/${user._id}`, { data: { userId: user._id } });
             dispatch({ type: "LOGOUT" });
             window.location.replace("/") // Redirect to homepage or login page
         } catch (err) {
@@ -62,8 +62,9 @@ export default function Settings() {
     }
 
     
-  
+    //console.log("Profile Image URL:", file ? URL.createObjectURL(file) : PF + user.profilePic);
 
+    const defaultProfilePic = "/profile.jpg"; // Path to the default image
 
   return (
     <div className="settings">
@@ -80,7 +81,7 @@ export default function Settings() {
                 <label>Profile Picture</label>
                 <div className="settingsPP">
                     <img className="settingsImg"
-                    src={file ? URL.createObjectURL(file) : PF + user.profilePic} alt="" />
+                    src={file ? URL.createObjectURL(file) : user.profilePic ? PF + user.profilePic : defaultProfilePic}  alt="" />
                     <label htmlFor="fileInput">
                     <i className="settingsPPIcon fa-regular fa-circle-user"></i> 
                     </label>

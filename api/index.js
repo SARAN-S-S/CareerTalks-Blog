@@ -44,3 +44,7 @@ mongoose
 app.listen("7733", () => {
     console.log("Backend is running.");
 });
+
+app.get("/", (req,res) => {
+    res.sendFile("Hello")
+}) 

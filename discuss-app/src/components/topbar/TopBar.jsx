@@ -17,18 +17,15 @@ export default function TopBar() {
 
   
 
-    // Debugging log
-    console.log("User Profile Pic:", user ? user.profilePic : "No user");
-    console.log("Profile Image URL:", user ? (user.profilePic ? PF + user.profilePic : defaultProfilePic) : defaultProfilePic);
-  
+    
 
   return (
     <div className="top">
       
             <Link className="link" to="/about" >
               <div className="topLeft">
-                <i  class="fa-solid fa-graduation-cap"></i>
-                <p class="profile-text"><b>CareerTalks</b></p>
+                <i  className="fa-solid fa-graduation-cap"></i>
+                <p className="profile-text"><b>CareerTalks</b></p>
               </div>
             </Link>
 
@@ -59,7 +56,7 @@ export default function TopBar() {
             <Link to="/settings" className="link" >
               <img className="topImg"
               src={user.profilePic ? PF + user.profilePic : defaultProfilePic}   alt="profile" />
-              <p class="profile-text">profile</p>
+              <p className="profile-text">profile</p>
               
             </Link>
             

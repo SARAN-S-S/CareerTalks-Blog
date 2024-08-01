@@ -6,7 +6,7 @@ export default function Sidebar() {
     <div className="sidebar">
         <div className="sidebarItem">
         <Link className="link" to = "/about" >
-          <span className="sidebarTitle"><bold><i>ABOUT DISCUSS</i></bold></span>
+          <span className="sidebarTitle"><b><i>ABOUT DISCUSS</i></b></span>
         </Link>
             <img className="sidebarImg"
             src="\side.jpg"
